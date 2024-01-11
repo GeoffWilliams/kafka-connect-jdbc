@@ -90,7 +90,7 @@ public class MSSQLDateTimeIT extends BaseConnectorIT {
     @ClassRule
     @SuppressWarnings("deprecation")
     public static final FixedHostPortGenericContainer mssqlServer =
-            new FixedHostPortGenericContainer<>("microsoft/mssql-server-linux:latest")
+            new FixedHostPortGenericContainer<>("mcr.microsoft.com/mssql/server:2019-latest")
                 .withEnv("ACCEPT_EULA","Y")
                 .withEnv("SA_PASSWORD","reallyStrongPwd123")
                 .withFixedExposedPort(1433, 1433);

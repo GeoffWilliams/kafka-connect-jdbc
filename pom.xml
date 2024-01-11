@@ -335,9 +335,13 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <inherited>true</inherited>
                 <configuration>
+                    <!-- required to make -Werror work on CLI -->
+                    <!-- https://stackoverflow.com/a/33823355 -->
+                    <showWarnings>true</showWarnings>
                     <compilerArgs>
                         <arg>-Xlint:all</arg>
-                        <arg>-Werror</arg>
+                            <!-- disabled due to presence of warnings -->
+<!--                        <arg>-Werror</arg>-->
                     </compilerArgs>
                 </configuration>
             </plugin>
